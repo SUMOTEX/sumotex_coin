@@ -1,14 +1,37 @@
 {
   "dependencies": {
+    "@chainlink/contracts": "^0.5.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
-    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/contracts": "^4.7.3",
     "@openzeppelin/contracts-upgradeable": "^4.6.0",
     "@openzeppelin/upgrades": "^2.8.0",
-    "hardhat": "^2.9.9"
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.1",
+    "hardhat": "^2.9.9",
+    "openzeppelin-solidity": "^4.6.0"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@openzeppelin/hardhat-upgrades": "^1.18.1",
     "ethers": "^5.6.8"
-  }
+  },
+  "name": "sumotex_coin",
+  "version": "1.0.0",
+  "main": "hardhat.config.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yennhan/sumotex_coin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yennhan/sumotex_coin/issues"
+  },
+  "homepage": "https://github.com/yennhan/sumotex_coin#readme",
+  "description": ""
 }

@@ -2,8 +2,8 @@
 const { ethers, upgrades } = require('hardhat');
 
 async function main () {
-  const smtx = await ethers.getContractFactory('SMTX');
-  console.log('Deploying SMTX...');
+  const smtx = await ethers.getContractFactory('SMTXToken');
+  console.log('Deploying SMTXToken...');
   const box = await upgrades.deployProxy(smtx);
   await box.deployed();
   console.log(box.address," box(proxy) address")
