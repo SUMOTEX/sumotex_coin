@@ -33,11 +33,6 @@ contract AirdropTimeLockSMTX {
     // The epoch, in seconds, representing the period of time from the initialTimestamp to the moment all funds are fully released i.e. 18 months
     uint256 public releaseEdge;
     address public walletOwner;
-    mapping(uint256 => bool) public xSumoList;
-    mapping(uint256 => address) public xSumoClaimAddress;
-
-    mapping(uint256 => bool) public ogSumoList;
-    mapping(uint256 => address) public ogSumoClaimAddress;
     // Last time a recipient accessed the unlock function
     // mapping(address => uint256) public mostRecentUnlockTimestamp;
 
@@ -69,14 +64,8 @@ contract AirdropTimeLockSMTX {
                 address(0x3C1E3B0Ad165A4bB19aee73eAddC5919996d4E8B),
             "owner address can not be 0xC2C...e4a"
         );
-        erc20Contract = IERC20(0x3C1E3B0Ad165A4bB19aee73eAddC5919996d4E8B);
+        erc20Contract = IERC20(0x102203517ce35AC5Cab9a2cda80DF03f26c7419b);
         walletOwner = address(0x52E595835C862c6F70275a038bde771F74325781);
-        for (uint256 i = 1; i <= 6000; i++) {
-            ogSumoList[i] = false;
-        }
-        for (uint256 i = 1; i <= 3300; i++) {
-            xSumoList[i] = false;
-        }
         // Initialize the reentrancy variable to not locked
         locked = false;
     }
@@ -228,23 +217,15 @@ contract AirdropTimeLockSMTX {
             amount >= (releaseEdge.sub(cliffEdge)),
             "Amount deposited must be greater than netReleasePeriod"
         );
-        string memory thePhase = "https://coin.sumotex.co/key=123";
+        string memory thePhase = "214125442A472D4B6150645367566B59";
         require(
             keccak256(bytes(secretPhase)) == keccak256(bytes(thePhase)),
             "Not from main website"
         );
         require(recipient != address(0), "ERC20: transfer to the zero address");
 
-        for (uint256 i = 0; i < _ogSumoList.length; i++) {
-            ogSumoList[_ogSumoList[i]]=true;
-            ogSumoClaimAddress[_ogSumoList[i]]=msg.sender;
-        }
-        for (uint256 i = 0; i < _xSumoList.length; i++) {
-            xSumoList[_xSumoList[i]]=true;
-            xSumoClaimAddress[_xSumoList[i]]=msg.sender;
-        }
-        balances[recipient] = balances[recipient].add(amount);
-        emit AllocationPerformed(recipient, amount);
+        balances[msg.sender] = balances[msg.sender].add(amount);
+        emit AllocationPerformed(msg.sender, amount);
     }
 
     /// @dev Allows the contract owner to allocate official ERC20 tokens to multiple future recipient in bulk.
@@ -326,18 +307,6 @@ contract AirdropTimeLockSMTX {
             token.safeTransfer(to, amount);
             emit TokensUnlocked(to, amount);
         }
-    }
-    function getOgSumoClaimInfo(uint256 tokenId) public view returns (bool name) {
-        return ogSumoList[tokenId];
-    }
-    function getXSumoClaimInfo(uint256 tokenId) public view returns (bool name) {
-        return xSumoList[tokenId];
-    }
-    function getXSumoClaimAddress(uint256 tokenId) public view returns (address name) {
-        return xSumoClaimAddress[tokenId];
-    }
-    function getOgSumoClaimAddress(uint256 tokenId) public view returns (address name) {
-        return ogSumoClaimAddress[tokenId];
     }
 
     function getWithdrawalAmount(address to) public view returns (uint256) {

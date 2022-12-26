@@ -23,7 +23,7 @@ contract FSTToken is
     mapping(address => bool) public blacklisted;
 
     function initialize() public initializer {
-        __ERC20_init("Homevest", "Homevest-1");
+        __ERC20_init("Homevest", "Homevest");
         __Ownable_init();
         __Pausable_init();
         _totalSupply = 2500000 * 10**uint256(decimals());

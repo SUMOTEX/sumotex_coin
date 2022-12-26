@@ -40,7 +40,7 @@ contract SST is
         __ERC721Burnable_init();
         __UUPSUpgradeable_init();
         x = _x;
-        maxSupply = 10000000000;
+        maxSupply = 100000000000;
     }
 
     function addNFTContract(address _auditorAddress) public onlyOwner {

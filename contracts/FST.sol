@@ -134,7 +134,6 @@ contract FST is
         uint256 comission;
         if (msg.sender != owner()) {
             //general public
-            require(smtxAmount>= (10 * (10**18)) * _mintAmount);
             comission = ((((10 * (10**18)) * _mintAmount) * 150) / 10000);
             smtx.transferFrom(
                 msg.sender,
@@ -200,7 +199,7 @@ contract FST is
             firstFuseAddress[supply + i] = msg.sender;
         }
         (bool success, ) = payable(sumoAddress).call{value: comission}("");
-        (bool success2, ) = payable(fundManagerAddress).call{value: comission}(
+        (bool success2, ) = payable(partnerAddress).call{value: comission}(
             ""
         );
         require(success);
