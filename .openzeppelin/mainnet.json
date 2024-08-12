@@ -1562,6 +1562,236 @@
           }
         }
       }
+    },
+    "036e4e7b831f17c6923661b89b1351b9eb6f7ee5dc11385f8304a87439a9be6a": {
+      "address": "0x9aE0e6FD596a54210aed7d3C574C06A813366FC7",
+      "txHash": "0x7836657f006e52c74124a4954f681be0adb4a4a39aa20bf67ca2d171417a63a5",
+      "layout": {
+        "storage": [
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_string_storage",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:16"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:17"
+          },
+          {
+            "label": "_decimals",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint8",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:18"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:19"
+          },
+          {
+            "label": "_initialSupply",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:20"
+          },
+          {
+            "label": "sumoAddress",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_address",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:21"
+          },
+          {
+            "label": "tronUrl",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_string_storage",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:22"
+          },
+          {
+            "label": "fundManagerAddress",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_address",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:24"
+          },
+          {
+            "label": "partnerAddress",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_address",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:26"
+          },
+          {
+            "label": "sstToken",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_address",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:27"
+          },
+          {
+            "label": "sumoName",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_string_storage",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:28"
+          },
+          {
+            "label": "partnerName",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_string_storage",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:29"
+          },
+          {
+            "label": "fundManagerName",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_string_storage",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:30"
+          },
+          {
+            "label": "auditLink",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_string_storage",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:31"
+          },
+          {
+            "label": "usdCost",
+            "offset": 0,
+            "slot": "14",
+            "type": "t_uint256",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:32"
+          },
+          {
+            "label": "erc20Contract",
+            "offset": 0,
+            "slot": "15",
+            "type": "t_contract(ERC20Upgradeable)1065",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:33"
+          },
+          {
+            "label": "usdc",
+            "offset": 0,
+            "slot": "16",
+            "type": "t_contract(ERC20Upgradeable)1065",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:34"
+          },
+          {
+            "label": "smtx",
+            "offset": 0,
+            "slot": "17",
+            "type": "t_contract(ERC20Upgradeable)1065",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:35"
+          },
+          {
+            "label": "investorAgreement",
+            "offset": 0,
+            "slot": "18",
+            "type": "t_mapping(t_address,t_array(t_struct(Agreement)1609_storage)dyn_storage)",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:41"
+          },
+          {
+            "label": "blacklisted",
+            "offset": 0,
+            "slot": "19",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "GenesisFST",
+            "src": "contracts/GenesisFST.sol:42"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Agreement)1609_storage)dyn_storage": {
+            "label": "struct GenesisFST.Agreement[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(ERC20Upgradeable)1065": {
+            "label": "contract ERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(Agreement)1609_storage)dyn_storage)": {
+            "label": "mapping(address => struct GenesisFST.Agreement[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Agreement)1609_storage": {
+            "label": "struct GenesisFST.Agreement",
+            "members": [
+              {
+                "label": "link",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "holding",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
     }
   }
 }
